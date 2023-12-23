@@ -1,0 +1,33 @@
+exports['dopeNotify']:gcNotify({                    
+					text = '<b><i class="fas fa-bell"></i>&nbsp;&nbsp;POWIADOMIENIE</span></b></br>Test!',
+					type = "ogolne",
+					timeout = 8000,
+					layout = "bottom",
+				})
+client
+
+TriggerClientEvent("dopeNotify:SendNotification", source, {		
+            text = '<b><i class="fas fa-bell"></i>&nbsp;&nbsp;POWIADOMIENIE</span></b></br>Test!',
+            type = "ogolne",
+            timeout = 8000,
+            layout = "topRight"
+        })
+
+server
+
+exports['dopeNotify']:gcNotify({                    
+				text = '<b><i class="fas fa-exclamation-triangle"></i>&nbsp;&nbsp;10-90</span></b></br>NAPAD NA KASETKE PRZY ULICY'.. robbinglocation,
+				type = "lspd",
+				timeout = 7000,
+				layout = "bottom",
+				sound = {
+					volume = 0.0
+				},
+				frontendSound = {
+					string = {'Bomb_Disarmed', 'GTAO_Speed_Convoy_Soundset'},
+					times = 3,
+					wait = 450
+				}
+			})
+
+client lspd
